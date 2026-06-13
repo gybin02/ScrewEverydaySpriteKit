@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03326FB25D4BE6510D23D1E1 /* icon_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 703F9B7344539878D81D2984 /* icon_lock.png */; };
+		0F35A6CAA462A99153786950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72703B57624F3EAD4E91EEF4 /* Assets.xcassets */; };
+		112B61B201F76C186FDDFAF6 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8AAE25344EA8058E986724F /* bgm.mp3 */; };
+		12DFCD0FCD6F23994222E01A /* part_core_bearing.png in Resources */ = {isa = PBXBuildFile; fileRef = 223A2E65F7E15F663314ACDF /* part_core_bearing.png */; };
+		1FC8FA0E9005A584E43C1244 /* part_copper_gear.png in Resources */ = {isa = PBXBuildFile; fileRef = F06F818F6275C0679628AAD6 /* part_copper_gear.png */; };
+		2085CB8131D2D8A6AA860C98 /* part_star_screw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0685085263D6B2CA3600C8 /* part_star_screw.png */; };
+		23D6DDBAAF170C8122F9608A /* launch_screen_art.png in Resources */ = {isa = PBXBuildFile; fileRef = B193CF6FCF4EAE1ECA0B9500 /* launch_screen_art.png */; };
+		24001D10332CB1D034AB80D1 /* btn_start.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD0E0FD8338DFC804F0C076 /* btn_start.png */; };
+		2490011A9EE2AB1C65E76914 /* match.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D50FFD0A82EB8BE030572F8 /* match.wav */; };
+		28FFA39DAF3003D9955D9611 /* btn_achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 497202033CC889C4D140A012 /* btn_achievements.png */; };
+		2E65799876D60B1B18B23072 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6ECD71C9FDF8273EC4ABDCE8 /* win.wav */; };
+		330B0124F5FC0D4C19CBE431 /* icon_gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD9BC05DEDD963453AEC2CF /* icon_gift.png */; };
+		33DDA31FBCB420E2C2339AEF /* part_airship_propeller.png in Resources */ = {isa = PBXBuildFile; fileRef = DB49AD244180045DC230C68E /* part_airship_propeller.png */; };
+		360AE18B3228965AF993F1F4 /* icon_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = E00EDC8479C05808A54CE6F4 /* icon_fail.png */; };
+		3925F483051ECBAA6D93B7BD /* ScrewEverydaySpriteKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC42113CF131589554539A /* ScrewEverydaySpriteKitApp.swift */; };
+		3E33291120A63F4A4B8DD5A3 /* icon_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 65078BB821A4D531AC4D6306 /* icon_coin.png */; };
+		546CC49BD1D0983A4758D107 /* home_machine_tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 42755D3FF62BFE3EBE228BA9 /* home_machine_tower.png */; };
+		55D52540C5260A9DAEC77B4C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675747A30EDC8B7ABDE197FF /* GameView.swift */; };
+		629D61D88C4CBBB145AB1DAD /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE42EDC1905C3CBA6DE649 /* L10n.swift */; };
+		69E6D1F659054E7BA9E40D96 /* icon_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD30E4647181A53644896D7 /* icon_play.png */; };
+		7342CD11D6A2286A870A5514 /* app_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D054648ADC0E7948EF3A37 /* app_background.png */; };
+		737779CC3B52842CBEAAD30B /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0110A4697D603DF2D2BCB0 /* AudioManager.swift */; };
+		774F1CAFE2606AD20BA9F495 /* home_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183DA74DBAD9188560E3C830 /* home_background.png */; };
+		7D6A3612D56B19CFA099DE58 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F83723FDE1001378EBA07EF /* click.mp3 */; };
+		9B792DB6BE2AB93EE1075529 /* UIImage+Bundled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC65783D23272E5E973FC9 /* UIImage+Bundled.swift */; };
+		9FC1970F081324AA91409BAA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3099380DF826201C2590DFF /* GameScene.swift */; };
+		A23937212C4BC1393BD19E18 /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F05D1AB6BC597FE2740B14 /* icon_back.png */; };
+		A33A742B4E6ACE0AC7E28F6E /* icon_levels.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C485DC6350DCADE1FBD3C4F /* icon_levels.png */; };
+		B31933E7468CEF2F9C6B2BB3 /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287C2F91DD714919CEB5279 /* GameModels.swift */; };
+		BBB279F6CB0F744A2C1414F1 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 444CE76725C90302282F3501 /* lose.wav */; };
+		BCC0C0254BCF5B9E0D194A33 /* part_pressure_gauge.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6D7323058AEAFC4EC170CB /* part_pressure_gauge.png */; };
+		BFFEFF5A47B6229D8F2EA463 /* icon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D6C87DB42F7A3C3E4922F7A /* icon_home.png */; };
+		C432ED0222D4B73DE218C7AE /* ProgressStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26191427DF226108B28AEE /* ProgressStore.swift */; };
+		C5696027A9506241DC71EDA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9B842783536A52BEFB499DF0 /* Localizable.xcstrings */; };
+		C62FD5C835C88552741AEAAD /* LevelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CB88DEEC57CF7F17970C4 /* LevelGenerator.swift */; };
+		CBCD30DD8C96A078C00CC72B /* icon_success.png in Resources */ = {isa = PBXBuildFile; fileRef = AEA7CA51847617592239BAC0 /* icon_success.png */; };
+		CC68415E0CBAA8E6738BFEFB /* icon_collection.png in Resources */ = {isa = PBXBuildFile; fileRef = 421A00DD435EA24CA8CC27DD /* icon_collection.png */; };
+		CD88BC78C1D33D261F9F0985 /* part_blue_wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BF06E9D05639C5D931EFB8C /* part_blue_wrench.png */; };
+		D7C8490240EBB9BCA28784C1 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C14CB0E6630D5E11B672EF /* AppRootView.swift */; };
+		DB03DA7A3D726D0DE18E0B57 /* icon_repair.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FD5D96D73C3C64F8B382496 /* icon_repair.png */; };
+		DF4AEF6E6CF4682D1978E76A /* icon_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D74DD266686772021DE2440 /* icon_check.png */; };
+		E169756E766D9B6F0562274D /* icon_tool.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CF0D843C1B2ACCA3D38B49 /* icon_tool.png */; };
+		EEC67210E86A49C620F650D7 /* btn_shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C94A17DB9DD0B8198F3237 /* btn_shop.png */; };
+		F376EEBF4A954B5748EFC425 /* btn_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F337B5B2A96BE95643BFBD /* btn_settings.png */; };
+		F3EF4134895ACAD1980E506F /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C5AB7F76B066FE88ACAE8 /* AppModels.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F83723FDE1001378EBA07EF /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
+		183DA74DBAD9188560E3C830 /* home_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_background.png; sourceTree = "<group>"; };
+		223A2E65F7E15F663314ACDF /* part_core_bearing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = part_core_bearing.png; sourceTree = "<group>"; };
+		255CB88DEEC57CF7F17970C4 /* LevelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGenerator.swift; sourceTree = "<group>"; };
+		27BC65783D23272E5E973FC9 /* UIImage+Bundled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundled.swift"; sourceTree = "<group>"; };
+		2D50FFD0A82EB8BE030572F8 /* match.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = match.wav; sourceTree = "<group>"; };
+		2D6C87DB42F7A3C3E4922F7A /* icon_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_home.png; sourceTree = "<group>"; };
+		2FD5D96D73C3C64F8B382496 /* icon_repair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_repair.png; sourceTree = "<group>"; };
+		36D054648ADC0E7948EF3A37 /* app_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_background.png; sourceTree = "<group>"; };
+		421A00DD435EA24CA8CC27DD /* icon_collection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_collection.png; sourceTree = "<group>"; };
+		42755D3FF62BFE3EBE228BA9 /* home_machine_tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_machine_tower.png; sourceTree = "<group>"; };
+		42CF0D843C1B2ACCA3D38B49 /* icon_tool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tool.png; sourceTree = "<group>"; };
+		444CE76725C90302282F3501 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		497202033CC889C4D140A012 /* btn_achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_achievements.png; sourceTree = "<group>"; };
+		4F26191427DF226108B28AEE /* ProgressStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStore.swift; sourceTree = "<group>"; };
+		5287C2F91DD714919CEB5279 /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
+		5D74DD266686772021DE2440 /* icon_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check.png; sourceTree = "<group>"; };
+		5FDC42113CF131589554539A /* ScrewEverydaySpriteKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrewEverydaySpriteKitApp.swift; sourceTree = "<group>"; };
+		63FE42EDC1905C3CBA6DE649 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		65078BB821A4D531AC4D6306 /* icon_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_coin.png; sourceTree = "<group>"; };
+		675747A30EDC8B7ABDE197FF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		6AD30E4647181A53644896D7 /* icon_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_play.png; sourceTree = "<group>"; };
+		6ECD71C9FDF8273EC4ABDCE8 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		703F9B7344539878D81D2984 /* icon_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_lock.png; sourceTree = "<group>"; };
+		72703B57624F3EAD4E91EEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76C14CB0E6630D5E11B672EF /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		79321551A19C9608AFC3BF5F /* ScrewEverydaySpriteKit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ScrewEverydaySpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0685085263D6B2CA3600C8 /* part_star_screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = part_star_screw.png; sourceTree = "<group>"; };
+		8BF06E9D05639C5D931EFB8C /* part_blue_wrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = part_blue_wrench.png; sourceTree = "<group>"; };
+		92F337B5B2A96BE95643BFBD /* btn_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_settings.png; sourceTree = "<group>"; };
+		99C94A17DB9DD0B8198F3237 /* btn_shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_shop.png; sourceTree = "<group>"; };
+		9B842783536A52BEFB499DF0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		9C485DC6350DCADE1FBD3C4F /* icon_levels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_levels.png; sourceTree = "<group>"; };
+		9DD9BC05DEDD963453AEC2CF /* icon_gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_gift.png; sourceTree = "<group>"; };
+		A4F05D1AB6BC597FE2740B14 /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
+		A8AAE25344EA8058E986724F /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
+		AEA7CA51847617592239BAC0 /* icon_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_success.png; sourceTree = "<group>"; };
+		B193CF6FCF4EAE1ECA0B9500 /* launch_screen_art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_screen_art.png; sourceTree = "<group>"; };
+		CBD0E0FD8338DFC804F0C076 /* btn_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_start.png; sourceTree = "<group>"; };
+		D3099380DF826201C2590DFF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		DB49AD244180045DC230C68E /* part_airship_propeller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = part_airship_propeller.png; sourceTree = "<group>"; };
+		DC6D7323058AEAFC4EC170CB /* part_pressure_gauge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = part_pressure_gauge.png; sourceTree = "<group>"; };
+		E00EDC8479C05808A54CE6F4 /* icon_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_fail.png; sourceTree = "<group>"; };
+		EB9C5AB7F76B066FE88ACAE8 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		F06F818F6275C0679628AAD6 /* part_copper_gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = part_copper_gear.png; sourceTree = "<group>"; };
+		FA0110A4697D603DF2D2BCB0 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1511A8B5E6F90FB8C26AE659 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A8AAE25344EA8058E986724F /* bgm.mp3 */,
+				0F83723FDE1001378EBA07EF /* click.mp3 */,
+				444CE76725C90302282F3501 /* lose.wav */,
+				2D50FFD0A82EB8BE030572F8 /* match.wav */,
+				6ECD71C9FDF8273EC4ABDCE8 /* win.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		675F8BC5750F037D933A347D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB9C5AB7F76B066FE88ACAE8 /* AppModels.swift */,
+				76C14CB0E6630D5E11B672EF /* AppRootView.swift */,
+				72703B57624F3EAD4E91EEF4 /* Assets.xcassets */,
+				FA0110A4697D603DF2D2BCB0 /* AudioManager.swift */,
+				5287C2F91DD714919CEB5279 /* GameModels.swift */,
+				D3099380DF826201C2590DFF /* GameScene.swift */,
+				675747A30EDC8B7ABDE197FF /* GameView.swift */,
+				63FE42EDC1905C3CBA6DE649 /* L10n.swift */,
+				255CB88DEEC57CF7F17970C4 /* LevelGenerator.swift */,
+				4F26191427DF226108B28AEE /* ProgressStore.swift */,
+				5FDC42113CF131589554539A /* ScrewEverydaySpriteKitApp.swift */,
+				27BC65783D23272E5E973FC9 /* UIImage+Bundled.swift */,
+				86DD4C7CAE5FF7189A0A768E /* Resources */,
+			);
+			name = Sources;
+			path = ScrewEverydaySpriteKit/Sources;
+			sourceTree = "<group>";
+		};
+		8454CB3761229DFCE8C5FA56 = {
+			isa = PBXGroup;
+			children = (
+				675F8BC5750F037D933A347D /* Sources */,
+				902CDB599DAA0A44C47DDCD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86DD4C7CAE5FF7189A0A768E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36D054648ADC0E7948EF3A37 /* app_background.png */,
+				497202033CC889C4D140A012 /* btn_achievements.png */,
+				92F337B5B2A96BE95643BFBD /* btn_settings.png */,
+				99C94A17DB9DD0B8198F3237 /* btn_shop.png */,
+				CBD0E0FD8338DFC804F0C076 /* btn_start.png */,
+				183DA74DBAD9188560E3C830 /* home_background.png */,
+				42755D3FF62BFE3EBE228BA9 /* home_machine_tower.png */,
+				A4F05D1AB6BC597FE2740B14 /* icon_back.png */,
+				5D74DD266686772021DE2440 /* icon_check.png */,
+				65078BB821A4D531AC4D6306 /* icon_coin.png */,
+				421A00DD435EA24CA8CC27DD /* icon_collection.png */,
+				E00EDC8479C05808A54CE6F4 /* icon_fail.png */,
+				9DD9BC05DEDD963453AEC2CF /* icon_gift.png */,
+				2D6C87DB42F7A3C3E4922F7A /* icon_home.png */,
+				9C485DC6350DCADE1FBD3C4F /* icon_levels.png */,
+				703F9B7344539878D81D2984 /* icon_lock.png */,
+				6AD30E4647181A53644896D7 /* icon_play.png */,
+				2FD5D96D73C3C64F8B382496 /* icon_repair.png */,
+				AEA7CA51847617592239BAC0 /* icon_success.png */,
+				42CF0D843C1B2ACCA3D38B49 /* icon_tool.png */,
+				B193CF6FCF4EAE1ECA0B9500 /* launch_screen_art.png */,
+				9B842783536A52BEFB499DF0 /* Localizable.xcstrings */,
+				DB49AD244180045DC230C68E /* part_airship_propeller.png */,
+				8BF06E9D05639C5D931EFB8C /* part_blue_wrench.png */,
+				F06F818F6275C0679628AAD6 /* part_copper_gear.png */,
+				223A2E65F7E15F663314ACDF /* part_core_bearing.png */,
+				DC6D7323058AEAFC4EC170CB /* part_pressure_gauge.png */,
+				7A0685085263D6B2CA3600C8 /* part_star_screw.png */,
+				1511A8B5E6F90FB8C26AE659 /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		902CDB599DAA0A44C47DDCD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79321551A19C9608AFC3BF5F /* ScrewEverydaySpriteKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A63C30CABFA30D1CF97FDEC8 /* ScrewEverydaySpriteKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CFA78E996AC2ECDA0268708 /* Build configuration list for PBXNativeTarget "ScrewEverydaySpriteKit" */;
+			buildPhases = (
+				C842522CD577B738E43878F9 /* Sources */,
+				E64E12001B168DB960CCAD34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrewEverydaySpriteKit;
+			productName = ScrewEverydaySpriteKit;
+			productReference = 79321551A19C9608AFC3BF5F /* ScrewEverydaySpriteKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B59E189453DEFE08141BE72D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 98831270C828424CD1392DB5 /* Build configuration list for PBXProject "ScrewEverydaySpriteKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 8454CB3761229DFCE8C5FA56;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A63C30CABFA30D1CF97FDEC8 /* ScrewEverydaySpriteKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E64E12001B168DB960CCAD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F35A6CAA462A99153786950 /* Assets.xcassets in Resources */,
+				C5696027A9506241DC71EDA3 /* Localizable.xcstrings in Resources */,
+				7342CD11D6A2286A870A5514 /* app_background.png in Resources */,
+				112B61B201F76C186FDDFAF6 /* bgm.mp3 in Resources */,
+				28FFA39DAF3003D9955D9611 /* btn_achievements.png in Resources */,
+				F376EEBF4A954B5748EFC425 /* btn_settings.png in Resources */,
+				EEC67210E86A49C620F650D7 /* btn_shop.png in Resources */,
+				24001D10332CB1D034AB80D1 /* btn_start.png in Resources */,
+				7D6A3612D56B19CFA099DE58 /* click.mp3 in Resources */,
+				774F1CAFE2606AD20BA9F495 /* home_background.png in Resources */,
+				546CC49BD1D0983A4758D107 /* home_machine_tower.png in Resources */,
+				A23937212C4BC1393BD19E18 /* icon_back.png in Resources */,
+				DF4AEF6E6CF4682D1978E76A /* icon_check.png in Resources */,
+				3E33291120A63F4A4B8DD5A3 /* icon_coin.png in Resources */,
+				CC68415E0CBAA8E6738BFEFB /* icon_collection.png in Resources */,
+				360AE18B3228965AF993F1F4 /* icon_fail.png in Resources */,
+				330B0124F5FC0D4C19CBE431 /* icon_gift.png in Resources */,
+				BFFEFF5A47B6229D8F2EA463 /* icon_home.png in Resources */,
+				A33A742B4E6ACE0AC7E28F6E /* icon_levels.png in Resources */,
+				03326FB25D4BE6510D23D1E1 /* icon_lock.png in Resources */,
+				69E6D1F659054E7BA9E40D96 /* icon_play.png in Resources */,
+				DB03DA7A3D726D0DE18E0B57 /* icon_repair.png in Resources */,
+				CBCD30DD8C96A078C00CC72B /* icon_success.png in Resources */,
+				E169756E766D9B6F0562274D /* icon_tool.png in Resources */,
+				23D6DDBAAF170C8122F9608A /* launch_screen_art.png in Resources */,
+				BBB279F6CB0F744A2C1414F1 /* lose.wav in Resources */,
+				2490011A9EE2AB1C65E76914 /* match.wav in Resources */,
+				33DDA31FBCB420E2C2339AEF /* part_airship_propeller.png in Resources */,
+				CD88BC78C1D33D261F9F0985 /* part_blue_wrench.png in Resources */,
+				1FC8FA0E9005A584E43C1244 /* part_copper_gear.png in Resources */,
+				12DFCD0FCD6F23994222E01A /* part_core_bearing.png in Resources */,
+				BCC0C0254BCF5B9E0D194A33 /* part_pressure_gauge.png in Resources */,
+				2085CB8131D2D8A6AA860C98 /* part_star_screw.png in Resources */,
+				2E65799876D60B1B18B23072 /* win.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C842522CD577B738E43878F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EF4134895ACAD1980E506F /* AppModels.swift in Sources */,
+				D7C8490240EBB9BCA28784C1 /* AppRootView.swift in Sources */,
+				737779CC3B52842CBEAAD30B /* AudioManager.swift in Sources */,
+				B31933E7468CEF2F9C6B2BB3 /* GameModels.swift in Sources */,
+				9FC1970F081324AA91409BAA /* GameScene.swift in Sources */,
+				55D52540C5260A9DAEC77B4C /* GameView.swift in Sources */,
+				629D61D88C4CBBB145AB1DAD /* L10n.swift in Sources */,
+				C62FD5C835C88552741AEAAD /* LevelGenerator.swift in Sources */,
+				C432ED0222D4B73DE218C7AE /* ProgressStore.swift in Sources */,
+				3925F483051ECBAA6D93B7BD /* ScrewEverydaySpriteKitApp.swift in Sources */,
+				9B792DB6BE2AB93EE1075529 /* UIImage+Bundled.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		48389FAB4E2396EEC1486448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7A6EEC6692228EE909F28B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A0232139FE28597D207A77CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "打个螺丝";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = (
+					UIInterfaceOrientationPortrait,
+				);
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = (
+					UIInterfaceOrientationPortrait,
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minigameeveryday.screw.spritekit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD70C178C4547C15E378C3CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "打个螺丝";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = (
+					UIInterfaceOrientationPortrait,
+				);
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = (
+					UIInterfaceOrientationPortrait,
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minigameeveryday.screw.spritekit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CFA78E996AC2ECDA0268708 /* Build configuration list for PBXNativeTarget "ScrewEverydaySpriteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD70C178C4547C15E378C3CA /* Debug */,
+				A0232139FE28597D207A77CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		98831270C828424CD1392DB5 /* Build configuration list for PBXProject "ScrewEverydaySpriteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A6EEC6692228EE909F28B0B /* Debug */,
+				48389FAB4E2396EEC1486448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B59E189453DEFE08141BE72D /* Project object */;
+}
