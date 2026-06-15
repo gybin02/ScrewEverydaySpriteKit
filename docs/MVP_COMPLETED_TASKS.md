@@ -49,13 +49,12 @@
 
 ## 二、 本轮新增高优任务：多语言本地化 (以英语为主)
 
-为了确保游戏能够顺利上架海外 App Store，我们在没有引入本地化 strings 文件（避免 XcodeGen 编译红错风险）的前提下，实现了一套**基于 Swift 运行时内存字典的动态本地化方案**：
+为了确保游戏能够顺利上架海外 App Store，本地化方案采用 Xcode 原生 **String Catalog（`.xcstrings`）**：
 
 ### 1. 技术实现原理
-*   定义 [L10n.swift](file:///Users/yd-sz-dn0588/Downloads/game/jsGame/ios/ScrewEverydaySpriteKit/ScrewEverydaySpriteKit/Sources/L10n.swift)，通过 `Locale.current.language.languageCode` 识别当前设备语言环境。
-*   当系统语言前缀为 `"zh"` 时，采用中文对照字典；**非中文或默认状态下，全部回退至英文（English）**，完美符合“游戏要以英语为主”的设计诉求。
-*   为 `String` 扩展了 `.localized` 属性与 `.localizedFormat(_ args:)` 格式化工具。
-
+*   使用 Xcode String Catalog 管理所有本地化字符串，编译期自动校验完整性。
+*   默认开发语言为英文（English），中文作为额外适配语言。
+*   SwiftUI 视图中直接使用 `LocalizedStringKey`，SpriteKit 场景中使用 `NSLocalizedString`。
 ### 2. 代码重构覆盖范围
 *   **数据模型** (`AppModels.swift`)：关卡展示名称（`Level %d`）、章节（`chapter_1`...）以及 6 种图鉴零件名称及故事，全部从硬编码中文改为了英文 Key。
 *   **界面框架** (`AppRootView.swift`)：所有 HomeScreen、LevelSelectScreen、CollectionScreen、SettlementScreen 的静态文本、按钮标题、每日任务提示、下一目标说明均完成本地化重写。

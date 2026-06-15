@@ -67,7 +67,7 @@ python3 tools/yueban-image-to-code/scripts/extract_png_asset.py \
 
 ### 7. 添加到项目
 
-将 PNG 放入 `ScrewEverydaySpriteKit/Resources/Images/`，代码中直接使用：
+将 PNG 放入 `/Resources/Images/`，代码中直接使用：
 
 ```swift
 Image(uiImage: .bundled("btn_xxx"))
@@ -110,7 +110,7 @@ art/
 │   ├── qa/                     # 预览验证图
 │   └── assets/images/          # 切图产物（中间产物）
 
-ScrewEverydaySpriteKit/
+ScrewEverydaySpriteKit/Sources/
 ├── Resources/Images/           # 最终图片资源（被 Bundle 加载）
 │   ├── btn_start.png
 │   ├── btn_shop.png

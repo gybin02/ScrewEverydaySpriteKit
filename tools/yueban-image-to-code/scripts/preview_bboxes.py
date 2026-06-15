@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+            #!/usr/bin/env python3
 """Draw manifest source bounding boxes on the source image for QA."""
 
 from __future__ import annotations

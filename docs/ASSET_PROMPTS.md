@@ -81,7 +81,7 @@ Cute cartoon mobile game background, cozy screw town repair workshop interior at
 - SwiftUI 首页、关卡页、图鉴页和结算页的全局氛围背景。
 - 当前在代码中叠加模糊和深色遮罩，保证文字与按钮可读。
 
-### 首页机器塔
+### ~~首页机器塔~~（已弃用，首页改用 mockup 设计图）
 
 路径：
 

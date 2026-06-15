@@ -33,7 +33,7 @@ ios/ScrewEverydaySpriteKit/ScrewEverydaySpriteKit/Sources/Assets.xcassets/
 命名规范：
 
 - 背景：`app_background`
-- 首页主视觉：`home_machine_tower`
+- 首页主视觉：mockup 设计图切图（见 `MOCKUP_UI_WORKFLOW.md`）
 - 图标：`icon_*`
 - 图鉴零件：`part_*`
 
@@ -141,7 +141,7 @@ Image("asset_name")
 替换目标：
 
 - 背景图：`app_background`
-- 主视觉：`home_machine_tower`
+- 主视觉：mockup 设计图切图
 - 播放按钮：`icon_play`
 - 关卡按钮：`icon_levels`
 - 图鉴按钮：`icon_collection`

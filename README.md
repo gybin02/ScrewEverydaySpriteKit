@@ -7,9 +7,19 @@
 - 已完成 SwiftUI + SpriteKit iOS 工程。
 - 已完成核心玩法闭环：固定 seed 关卡、工具箱、备选区、螺丝级遮挡、消除补箱、备选区回流、胜负结算。
 - 已完成 App 外围闭环：首页、关卡页、游戏页、结算页、轻量收藏图鉴、本地进度存档。
-- 游戏页使用 SpriteKit 程序绘制；首页主视觉、全局背景、按钮图标、图鉴零件、正式 AppIcon 和 Launch Screen 已接入 AI 生成图片资产。
-- 统一视觉规范见 `design.md`，图片替换流程见 `IMAGE_REPLACEMENT_WORKFLOW.md`。
+- 游戏页使用 SpriteKit 程序绘制；首页使用 mockup 设计图切图方案；全局背景、按钮图标、图鉴零件、正式 AppIcon 和 Launch Screen 已接入 AI 生成图片资产。
+- 统一视觉规范见 `docs/design.md`，图片替换流程见 `docs/IMAGE_REPLACEMENT_WORKFLOW.md`。
 - 已在 iPhone 17 Simulator 上 build/run 通过，并截图确认首页、关卡页和游戏页正常。
+
+## 开发进度
+
+| Phase | 内容 | 状态 |
+| --- | --- | --- |
+| 1 - 核心玩法移植 | JS→Swift 翻译，坐标系转换，遮挡/补箱/回流逻辑 | ✅ |
+| 2 - App 闭环（MVP） | SwiftUI 页面路由、60 关固定 seed、本地存档、结算奖励 | ✅ |
+| 3 - 手游化体验升级 | 音效触觉、动态难度、暂停/道具、金币消费闭环 | ✅ |
+| 4 - 视觉资产与本地化 | AI 图片生成、AppIcon、Launch Screen、多语言（英语为主） | ✅ |
+| 5 - 发布准备 | 真机测试、App Store 截图、正式 AppIcon、隐私政策 | 🔲 |
 
 ## 参考来源
 
@@ -24,7 +34,7 @@
 - `js/core/levelData.js`：随机关卡生成
 - `../minigame-everyday/articles/01-day-screw.md`：复刻过程和最终规则说明
 - `../minigame-everyday/agents.md`：本次移植任务记录
-- `ASSET_PROMPTS.md`：AI 图片资产生成 prompt 和用途记录
+- `docs/ASSET_PROMPTS.md`：AI 图片资产生成 prompt 和用途记录
 
 ## 游戏规则
 
@@ -194,6 +204,22 @@ ScrewEverydaySpriteKit.xcodeproj
   - 关卡页正常显示章节进度、60 个关卡节点和当前关卡奖励卡片。
   - 游戏页正常显示返回按钮、标题、状态、4 个工具箱、5 个备选洞、21 块板和 63 颗螺丝。
 
+## 文档索引
+
+详细开发文档已迁移至 `docs/` 目录：
+
+| 文档 | 说明 |
+| --- | --- |
+| [docs/Agents.md](docs/Agents.md) | AI 辅助开发记录、迭代里程碑、关键技术决策 |
+| [docs/MVP_WORKFLOW.md](docs/MVP_WORKFLOW.md) | 从单屏到 MVP 的完整落地流程 |
+| [docs/MVP_COMPLETED_TASKS.md](docs/MVP_COMPLETED_TASKS.md) | MVP 阶段已完成任务报告 |
+| [docs/EXPERIENCE_AND_AUDIO.md](docs/EXPERIENCE_AND_AUDIO.md) | 体验优化与音效系统开发记录 |
+| [docs/ui-spec.md](docs/ui-spec.md) | UI 界面结构、布局坐标与交互状态 |
+| [docs/design.md](docs/design.md) | 统一视觉规范 |
+| [docs/ASSET_PROMPTS.md](docs/ASSET_PROMPTS.md) | AI 图片资产生成 Prompt 记录 |
+| [docs/IMAGE_REPLACEMENT_WORKFLOW.md](docs/IMAGE_REPLACEMENT_WORKFLOW.md) | 图片替换流程 |
+| [docs/MOCKUP_UI_WORKFLOW.md](docs/MOCKUP_UI_WORKFLOW.md) | 首页 Mock UI 切图与落地流程 |
+
 ## 后续开发建议
 
 1. 增加音效：点击、入箱、消除、失败。
@@ -207,9 +233,9 @@ ScrewEverydaySpriteKit.xcodeproj
 
 ## 已知限制
 
-- 当前没有音效和触觉反馈。
-- 当前没有暂停、撤销或道具。
-- 当前关卡难度主要来自固定 seed，尚未按关卡号动态调整生成参数。
+- ~~当前没有音效和触觉反馈。~~ ✅ 已实现。
+- ~~当前没有暂停、撤销或道具。~~ ✅ 已实现。
+- ~~当前关卡难度主要来自固定 seed，尚未按关卡号动态调整生成参数。~~ ✅ 已实现动态难度。
 - 当前收藏图鉴是轻量版本，只记录部分关卡奖励零件，没有详情故事页。
 - 当前胜利条件绑定到完整处理所有螺丝、工具箱清空和备选区清空，和 JS 最终版的“工具箱清空判胜”相比更严格。
 - `DerivedData/` 是本地构建产物，不应提交。
