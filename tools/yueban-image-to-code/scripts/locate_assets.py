@@ -14,17 +14,11 @@ import sys
 from pathlib import Path
 import numpy as np
 
-# 内置 Y 轴微调补偿 (正值代表向下移动像素，校正垂直方向偏上的问题)
-# 关卡和图鉴按钮在 AI 绘图里上部留白较多，因此向下补偿 8 像素；开始按钮向下补偿 4 像素。
-Y_OFFSET_COMPENSATION = {
-    "home_btn_start": 4,
-    "home_btn_levels": 8,
-    "home_btn_collection": 8,
-    "home_btn_settings": 0,
-}
+# 移除原先硬编码的 Y 轴微调补偿，因为遮罩匹配已经足够精准
+Y_OFFSET_COMPENSATION = {}
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Locate assets using Multi-channel NCC.")
+    parser = argparse.ArgumentParser(description="Locate assets using Multi-channel Masked NCC.")
     parser.add_argument("source", help="Target design image (e.g. balanced mock)")
     parser.add_argument("manifest", help="Path to layers.manifest.json")
     parser.add_argument(
@@ -44,15 +38,22 @@ def parse_args() -> argparse.Namespace:
     )
     return parser.parse_args()
 
-def norm_cross_correlation_rgb(candidate: np.ndarray, template: np.ndarray) -> float:
-    # 三通道 RGB 分别计算 NCC 并求均值，强力保留颜色边界特征
+def norm_cross_correlation_rgba_masked(candidate: np.ndarray, template_rgb: np.ndarray, mask: np.ndarray) -> float:
+    # 三通道 RGB 分别计算 NCC 并求均值，只统计 mask 为 True（非透明）的像素，排除背景干扰
     scores = []
-    for c in range(3):
-        cand_c = candidate[:, :, c]
-        temp_c = template[:, :, c]
+    n_pixels = np.sum(mask)
+    if n_pixels < 4:
+        return 0.0
         
-        c_zero = cand_c - np.mean(cand_c)
-        t_zero = temp_c - np.mean(temp_c)
+    for c in range(3):
+        cand_c = candidate[:, :, c][mask]
+        temp_c = template_rgb[:, :, c][mask]
+        
+        mean_c = np.mean(cand_c)
+        mean_t = np.mean(temp_c)
+        
+        c_zero = cand_c - mean_c
+        t_zero = temp_c - mean_t
         
         num = np.sum(c_zero * t_zero)
         den = np.sqrt(np.sum(c_zero ** 2) * np.sum(t_zero ** 2))
@@ -83,14 +84,14 @@ def search_single_asset(
     if not template_path.exists():
         raise FileNotFoundError(f"Template asset not found: {template_path}")
     
-    temp_img = Image.open(template_path).convert("RGB")
-    temp_w_orig, temp_h_orig = temp_img.size
+    # 读入为 RGBA，提取 Alpha 通道作为 Mask
+    temp_img = Image.open(template_path).convert("RGBA")
     
     lh, lw, _ = source_rgb.shape
     
     best_score = -1.0
     best_x, best_y = 0, 0
-    best_w, best_h = temp_w_orig, temp_h_orig
+    best_w, best_h = temp_img.size
     best_scale = 1.0
     
     x_orig = orig_bbox["x"]
@@ -114,10 +115,15 @@ def search_single_asset(
         resized_temp = temp_img.resize((tw, th), Image.Resampling.BILINEAR)
         temp_arr = np.array(resized_temp, dtype=np.float32)
         
+        # 拆分 RGB 和 Alpha 蒙版
+        temp_rgb = temp_arr[:, :, :3]
+        temp_alpha = temp_arr[:, :, 3]
+        mask = temp_alpha > 50  # 过滤掉几乎完全透明的像素
+        
         for y in range(y_start, y_end - th + 1):
             for x in range(x_start, x_end - tw + 1):
                 candidate_arr = source_rgb[y:y+th, x:x+tw]
-                score = norm_cross_correlation_rgb(candidate_arr, temp_arr)
+                score = norm_cross_correlation_rgba_masked(candidate_arr, temp_rgb, mask)
                 
                 if score > best_score:
                     best_score = score

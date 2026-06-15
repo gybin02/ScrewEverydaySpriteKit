@@ -466,3 +466,20 @@ screenY = sceneHeight - (offsetY + logicalY * uiScale)
 - 构建运行：`XcodeBuildMCP build_run_sim` 通过。
 - 截图确认：首页、关卡页、游戏页均正常显示；游戏页包含标题、状态、4 个工具箱、5 格备选区、木板堆叠区和螺丝。
 - 本次截图路径：`/var/folders/65/dsb4w0_16rqf8ysg1hnb_jk80000gn/T/screenshot_optimized_82debb64-8ea7-4541-bc42-8a0576531c9a.jpg`。
+
+
+## 10. 自动生成定位信息
+
+<!-- START AUTO GENERATED HOME LAYOUT -->
+
+| 图层 ID | 原始尺寸 (W x H) | 缩放后尺寸 (W x H) | 原始坐标 (X, Y) | 缩放后坐标 (X, Y) | zIndex |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| `background` | 608x1088 | 750x1342 | (0, 0) | (0, 0) | 0 |
+| `title_logo` | 430x310 | 530x382 | (95, 18) | (117, 22) | 10 |
+| `blueprint_house` | 370x270 | 456x333 | (75, 330) | (93, 407) | 5 |
+| `signpost_menu` | 170x250 | 210x308 | (428, 355) | (528, 438) | 10 |
+| `start_button` | 370x160 | 456x197 | (120, 650) | (148, 802) | 10 |
+| `wood_planks` | 290x258 | 358x318 | (0, 830) | (0, 1024) | 8 |
+| `hammer_screws` | 318x208 | 392x257 | (290, 880) | (358, 1085) | 8 |
+
+<!-- END AUTO GENERATED HOME LAYOUT -->
