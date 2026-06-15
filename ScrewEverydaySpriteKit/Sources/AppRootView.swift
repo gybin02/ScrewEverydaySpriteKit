@@ -16,7 +16,7 @@ struct AppRootView: View {
         ZStack {
             switch route {
             case .home:
-                HomeScreen(
+                FalHomeScreen(
                     progressStore: progressStore,
                     onPlay: { route = .game(progressStore.currentLevel) },
                     onLevels: { route = .levels },
@@ -66,92 +66,103 @@ struct HomeScreen: View {
     @State private var isPlayButtonAnimating = false
 
     var body: some View {
-        ScreenBackground(bgImageName: "home_background", blurRadius: 0, overlayOpacity: 0.18) {
-            VStack(spacing: 0) {
-                // 顶栏：资源条与设置按钮
+        GeometryReader { geo in
+            ZStack(alignment: .topLeading) {
+                // 背景大图
+                Image(uiImage: .bundled("mockup_cute_clay"))
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
+                    .overlay(
+                        GeometryReader { imageGeo in
+                            let scale = imageGeo.size.width / 750.0
+                            ZStack(alignment: .topLeading) {
+                                // 图层: start_button
+                                Button(action: onPlay) {
+                                    Image(uiImage: .bundled("btn_start"))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: CGFloat(382) * scale, height: CGFloat(191) * scale)
+                                .offset(x: CGFloat(184) * scale, y: CGFloat(1005) * scale)
+                                .scaleEffect(isPlayButtonAnimating ? 1.03 : 1.0)
+                                .animation(
+                                    .easeInOut(duration: 0.95).repeatForever(autoreverses: true),
+                                    value: isPlayButtonAnimating
+                                )
+                                .zIndex(10)
+
+                                // 图层: daily_button
+                                Button(action: {
+                                    print("点击了 daily_button")
+                                }) {
+                                    Image(uiImage: .bundled("btn_daily"))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: CGFloat(111) * scale, height: CGFloat(130) * scale)
+                                .offset(x: CGFloat(20) * scale, y: CGFloat(592) * scale)
+                                .zIndex(10)
+
+                                // 图层: rank_button
+                                Button(action: {
+                                    print("点击了 rank_button")
+                                }) {
+                                    Image(uiImage: .bundled("btn_rank"))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: CGFloat(111) * scale, height: CGFloat(130) * scale)
+                                .offset(x: CGFloat(20) * scale, y: CGFloat(725) * scale)
+                                .zIndex(10)
+
+                                // 图层: achievements_button (Pets)
+                                Button(action: onCollection) {
+                                    Image(uiImage: .bundled("btn_achievements"))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: CGFloat(111) * scale, height: CGFloat(130) * scale)
+                                .offset(x: CGFloat(20) * scale, y: CGFloat(859) * scale)
+                                .zIndex(10)
+
+                                // 图层: shop_button
+                                Button(action: onLevels) {
+                                    Image(uiImage: .bundled("btn_shop"))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: CGFloat(111) * scale, height: CGFloat(148) * scale)
+                                .offset(x: CGFloat(619) * scale, y: CGFloat(752) * scale)
+                                .zIndex(10)
+
+                                // 图层: settings_button
+                                Button(action: { isSettingPresented = true }) {
+                                    Image(uiImage: .bundled("btn_settings"))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: CGFloat(111) * scale, height: CGFloat(148) * scale)
+                                .offset(x: CGFloat(619) * scale, y: CGFloat(896) * scale)
+                                .zIndex(10)
+                            }
+                        }
+                    )
+
+                // 顶栏资源层 (叠加提供动态数值)
                 HStack(spacing: 12) {
                     ResourcePill(assetName: "icon_repair", text: "\(progressStore.state.repairValue)")
                     Spacer()
                     ResourcePill(assetName: "icon_coin", text: "\(progressStore.state.coins)")
                 }
                 .padding(.horizontal, 24)
-                .padding(.top, 16)
-                
-                Spacer(minLength: 16)
-                
-                // 封面级游戏标题
-                VStack(spacing: 6) {
-                    Text("game_title".localized)
-                        .font(.system(size: 52, weight: .black))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors: [Color(hex: 0xF4A261), Color(hex: 0xE9C46A)],
-                                startPoint: .top,
-                                endPoint: .bottom
-                             )
-                        )
-                        .shadow(color: .black.opacity(0.65), radius: 4, x: 0, y: 3)
-                    Text("game_subtitle".localized)
-                        .font(.system(size: 15, weight: .bold))
-                        .foregroundStyle(Color.white.opacity(0.64))
-                        .tracking(2)
-                }
-                .padding(.top, 10)
-                
-                Spacer(minLength: 16)
-                
-                // 核心主视觉大图：放大机器塔并去除边框
-                ZStack {
-                    Image(uiImage: .bundled("home_machine_tower"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxHeight: 320)
-                        .shadow(color: .black.opacity(0.5), radius: 12, x: 0, y: 8)
-                }
-                .padding(.horizontal, 24)
-                .overlay(alignment: .trailing) {
-                    // 右侧路牌按钮
-                    VStack(spacing: 6) {
-                        Button(action: onLevels) {
-                            Image(uiImage: .bundled("btn_shop"))
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 36)
-                        }
-                        Button(action: onCollection) {
-                            Image(uiImage: .bundled("btn_achievements"))
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 36)
-                        }
-                        Button { isSettingPresented = true } label: {
-                            Image(uiImage: .bundled("btn_settings"))
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 36)
-                        }
-                    }
-                    .padding(.trailing, -8)
-                }
-                
-                Spacer(minLength: 20)
-                
-                // START 图片按钮
-                Button(action: onPlay) {
-                    Image(uiImage: .bundled("btn_start"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 70)
-                }
-                .scaleEffect(isPlayButtonAnimating ? 1.03 : 1.0)
-                .animation(
-                    .easeInOut(duration: 0.95).repeatForever(autoreverses: true),
-                    value: isPlayButtonAnimating
-                )
-                .onAppear { isPlayButtonAnimating = true }
-                
-                Spacer(minLength: 24)
+                .padding(.top, geo.safeAreaInsets.top > 0 ? geo.safeAreaInsets.top + 8 : 16)
+                .frame(width: geo.size.width)
+                .zIndex(20)
             }
+            .ignoresSafeArea()
+            .onAppear { isPlayButtonAnimating = true }
         }
         .sheet(isPresented: $isSettingPresented) {
             SettingsView(isPresented: $isSettingPresented)

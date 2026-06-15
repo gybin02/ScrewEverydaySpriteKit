@@ -24,12 +24,6 @@
 
 ## 3. 当前资产结构
 
-图片资产统一放在：
-
-```text
-ios/ScrewEverydaySpriteKit/ScrewEverydaySpriteKit/Sources/Assets.xcassets/
-```
-
 命名规范：
 
 - 背景：`app_background`
