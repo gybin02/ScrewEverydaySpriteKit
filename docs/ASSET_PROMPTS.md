@@ -217,3 +217,83 @@ ios/ScrewEverydaySpriteKit/ScrewEverydaySpriteKit/Sources/Assets.xcassets/AppIco
 | `icon_lock` | 未解锁关卡、图鉴角标 | 黄铜锁和螺丝孔 |
 | `icon_check` | 已通关关卡 | 木质螺丝令牌上的绿色勾 |
 | `icon_tool` | 当前/可玩普通关卡 | 螺丝刀和螺丝交叉徽章 |
+
+## 页面 Mockup（Cute Clay 风格）
+
+以下 mockup 统一使用 `-s portrait_9_19` 生成（608 × 1284），风格为 cute clay 3D 软质感黏土手游风。
+
+### 胜利结算页 Mockup
+
+路径：
+
+```text
+art/mockup_settlement_victory.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game victory settlement screen mockup, cute clay 3D soft texture style, rounded edges. Dark navy blue background (#2D3142). Top area: golden trophy icon with cute screws decoration, large green text VICTORY banner with ribbon. Middle area: stats card panel showing time, screws count, steps with cute icon badges, golden coins reward +10 with shiny coin icon. Bottom area: large orange rounded NEXT LEVEL button with play arrow icon, smaller dark BACK TO LEVELS button below. Decorative elements: tiny gears, confetti particles, star sparkles around trophy. Warm workshop glow atmosphere. No real text, use scribble placeholders for text areas. Polished hand-drawn mobile game UI, vertical phone layout, no watermark
+```
+
+用途：
+
+- 胜利结算页的整体视觉参考与布局定位基准。
+
+### 失败结算页 Mockup
+
+路径：
+
+```text
+art/mockup_settlement_failure.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game failure settlement screen mockup, cute clay 3D soft texture style, rounded edges. Dark navy blue background (#2D3142). Top area: sad broken screw icon with red warning badge, large red FAILED text banner. Middle area: failure reason card showing buffer area full warning with cute worried face icon. Bottom area: large orange rounded RETRY button with refresh arrow icon as primary action, smaller dark BACK HOME button below. Decorative elements: loose screws falling, tiny sad gears. Moody but still cute atmosphere, encouraging to retry. No real text, use scribble placeholders. Polished hand-drawn mobile game UI, vertical phone layout, no watermark
+```
+
+用途：
+
+- 失败结算页的整体视觉参考与布局定位基准。
+
+### 游戏主界面 Mockup
+
+路径：
+
+```text
+art/mockup_gameplay.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game main gameplay screen mockup, cute clay 3D soft texture style, rounded edges. Dark navy blue background (#2D3142). Layout from top to bottom: TOP HUD: small back arrow button top-left, level title center, coin counter top-right. TOOLBOX ROW: 4 cute rounded rectangular toolboxes in a row, each with 3 circular screw holes, colored borders (red, orange, teal, purple), with small handle on top. BUFFER ZONE: horizontal rounded rectangle panel with 5 empty circular holes in a row, labeled buffer area. MAIN GAME AREA: 7 rows of overlapping wooden planks with cute wood grain texture, each plank has 3 colorful screws (red, orange, yellow, teal, blue, purple, pink), some screws dimmed showing they are blocked by upper planks. Warm cozy workshop atmosphere, slight depth shadows on planks. Polished hand-drawn mobile game UI, vertical phone layout, no real text use scribble placeholders, no watermark
+```
+
+用途：
+
+- 游戏主界面的整体视觉参考，用于指导 SpriteKit 场景的美术还原。
+
+## 通用 UI 控件素材大图
+
+### 控件素材合集（品红背景，用于切图）
+
+路径：
+
+```text
+art/ui_controls_asset_sheet.png
+```
+
+Prompt：
+
+```text
+UI asset sheet for a cute clay 3D casual puzzle mobile game. Solid pure magenta (#FF00FF) background. Neatly arranged game UI controls with generous spacing between each element: TOP ROW: a round blue back arrow button with screw decoration, a round red close X button, a round green checkmark button. SECOND ROW: a large wide orange rounded rectangle CONFIRM/OK button with glossy highlight, a large wide green rounded rectangle PLAY/NEXT button with arrow icon. THIRD ROW: a large ornate blue rounded rectangle popup dialog background frame with decorative corner screws and gear ornaments, golden title banner ribbon on top. FOURTH ROW: small decorative elements - golden star, silver gear, bronze screw, sparkle effect, ribbon banner. FIFTH ROW: a horizontal stamina bar with green fill, a coin counter pill shape with gold coin icon. All elements in cute clay 3D soft texture style with rounded edges. No shadows on background, flat arrangement, sharp outlines on each element. Each control is clearly separated. No text, no watermark
+```
+
+用途：
+
+- 通用 UI 控件素材源图。品红色背景便于 chroma key 去底切图。
+- 包含：返回按钮、关闭按钮、确认按钮、确定/下一步长按钮、弹窗背景框、装饰元素（星星/齿轮/螺丝/闪光/缎带）、体力条、金币条。
+- 切出的透明 PNG 可用于结算页、游戏页、弹窗等所有界面的通用控件。
