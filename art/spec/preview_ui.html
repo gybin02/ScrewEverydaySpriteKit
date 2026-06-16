@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI-Spec 像素级还原预览 (HTML)</title>
+    <style>
+        /* 页面全局暗色背景与重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        /* 顶部标题与说明说明 */
+        .info-header {
+            text-align: center;
+            margin-bottom: 15px;
+            z-index: 10;
+        }
+        .info-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .info-header p {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        /* 移动端外部模拟框容器，具有毛玻璃边框与投影 */
+        .simulator-viewport {
+            transform-origin: center center;
+            transition: transform 0.1s ease-out;
+        }
+
+        .phone-frame {
+            width: 638px; /* 608px 画布 + 左右各 15px 边框 */
+            height: 1310px; /* 1280px 画布 + 上下各 15px 边框 */
+            background: rgba(30, 41, 59, 0.7);
+            border: 15px solid #1e293b;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7),
+                        inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* UI 画布容器 - 像素级匹配 608 × 1280 */
+        .ui-canvas {
+            width: 608px;
+            height: 1280px;
+            position: relative;
+            /* 背景图使用 spec 目录下的 bg_cute_clay.png，与 HTML 处于同目录 */
+            background-image: url('bg_cute_clay.png');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        /* 统一的 UI 元素样式，通过绝对定位还原 */
+        .ui-element {
+            position: absolute;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* 顶部状态条样式（非交互元素） */
+        .ui-status {
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+        }
+
+        /* 按钮交互样式 (Hover & Active 微动效) */
+        .ui-btn {
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+        }
+        .ui-btn:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.35)) brightness(1.05);
+        }
+        .ui-btn:active {
+            transform: scale(0.95);
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2)) brightness(0.95);
+        }
+
+        /* ============================================================
+           根据最新去毛刺 Bounding Box 优化后算出的精确绝对坐标与尺寸定义
+           ============================================================ */
+        
+        /* 体力条 life_bar.png: 178x63 @ (18, 25) */
+        #life-bar {
+            left: 18px;
+            top: 25px;
+            width: 178px;
+            height: 63px;
+        }
+
+        /* 金币条 coin_bar.png: 166x60 @ (428, 28) */
+        #coin-bar {
+            left: 428px;
+            top: 28px;
+            width: 166px;
+            height: 60px;
+        }
+
+        /* 每日签到 daily_btn.png: 89x114 @ (16, 647) */
+        #daily-btn {
+            left: 16px;
+            top: 647px;
+            width: 89px;
+            height: 114px;
+        }
+
+        /* 排行榜 rank_btn.png: 89x110 @ (16, 773) */
+        #rank-btn {
+            left: 16px;
+            top: 773px;
+            width: 89px;
+            height: 110px;
+        }
+
+        /* 宠物按钮 pets_btn.png: 89x109 @ (16, 898) */
+        #pets-btn {
+            left: 16px;
+            top: 898px;
+            width: 89px;
+            height: 109px;
+        }
+
+        /* 商店按钮 shop_btn.png: 88x114 @ (505, 806) */
+        #shop-btn {
+            left: 505px;
+            top: 806px;
+            width: 88px;
+            height: 114px;
+        }
+
+        /* 设置按钮 settings_btn.png: 88x116 @ (505, 931) */
+        #settings-btn {
+            left: 505px;
+            top: 931px;
+            width: 88px;
+            height: 116px;
+        }
+
+        /* 开始游戏 play_btn.png: 325x150 @ (142, 1048) */
+        #play-btn {
+            left: 142px;
+            top: 1048px;
+            width: 325px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-header">
+        <h1>主界面 UI 像素级 HTML 还原预览</h1>
+        <p>背景: bg_cute_clay.png · 经过边缘去毛刺与物理 Bounding Box 收拢校准</p>
+    </div>
+
+    <!-- 手机模拟器外框 -->
+    <div class="simulator-viewport" id="viewport">
+        <div class="phone-frame">
+            <div class="ui-canvas">
+                <!-- 顶部栏 -->
+                <img id="life-bar" class="ui-element ui-status" src="life_bar.png" alt="体力条">
+                <img id="coin-bar" class="ui-element ui-status" src="coin_bar.png" alt="金币条">
+
+                <!-- 左侧按钮 -->
+                <img id="daily-btn" class="ui-element ui-btn" src="daily_btn.png" alt="每日签到">
+                <img id="rank-btn" class="ui-element ui-btn" src="rank_btn.png" alt="排行榜">
+                <img id="pets-btn" class="ui-element ui-btn" src="pets_btn.png" alt="宠物">
+
+                <!-- 右侧按钮 -->
+                <img id="shop-btn" class="ui-element ui-btn" src="shop_btn.png" alt="商店">
+                <img id="settings-btn" class="ui-element ui-btn" src="settings_btn.png" alt="设置">
+
+                <!-- 底部开始按钮 -->
+                <img id="play-btn" class="ui-element ui-btn" src="play_btn.png" alt="开始游戏">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 实现自适应屏幕缩放，防止大图溢出视口
+        function adjustScale() {
+            const viewport = document.getElementById('viewport');
+            const windowHeight = window.innerHeight;
+            const targetHeight = 1450; 
+            
+            if (windowHeight < targetHeight) {
+                const scale = windowHeight / targetHeight;
+                viewport.style.transform = `scale(${Math.max(0.3, scale)})`;
+            } else {
+                viewport.style.transform = 'scale(1)';
+            }
+        }
+
+        window.addEventListener('resize', adjustScale);
+        window.addEventListener('load', adjustScale);
+    </script>
+</body>
+</html>
