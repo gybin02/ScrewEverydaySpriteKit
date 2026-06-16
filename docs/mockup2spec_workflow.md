@@ -66,7 +66,7 @@ python3 ~/.cursor/skills/image-postprocess/scripts/floodfill_remove_bg.py \
 ### 方法 B：使用 `slice_assets.py` 脚本 (适用于白底/错落排版)
 若您的 Mockup 是带有白色或淡白色底的界面设计大图，应使用特化的连通域分析脚本：
 ```bash
-python3 art/slice_assets.py \
+python3 tools/slice_assets.py \
   -i art/asset_all_fal.png \
   -o art/spec \
   -t 245 \

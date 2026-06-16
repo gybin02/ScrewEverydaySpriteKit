@@ -9,6 +9,7 @@
 - 已完成 App 外围闭环：首页、关卡页、游戏页、结算页、轻量收藏图鉴、本地进度存档。
 - 游戏页使用 SpriteKit 程序绘制；首页使用 mockup 设计图切图方案；全局背景、按钮图标、图鉴零件、正式 AppIcon 和 Launch Screen 已接入 AI 生成图片资产。
 - 统一视觉规范见 `docs/design.md`，图片替换流程见 `docs/IMAGE_REPLACEMENT_WORKFLOW.md`。
+- 切图前置准备规范见 `docs/mockup_slice_preparation.md`，完整切图与代码还原工作流见 `docs/mockup2spec_workflow.md`。
 - 已在 iPhone 17 Simulator 上 build/run 通过，并截图确认首页、关卡页和游戏页正常。
 
 ## 开发进度
@@ -35,6 +36,8 @@
 - `../minigame-everyday/articles/01-day-screw.md`：复刻过程和最终规则说明
 - `../minigame-everyday/agents.md`：本次移植任务记录
 - `docs/ASSET_PROMPTS.md`：AI 图片资产生成 prompt 和用途记录
+- `docs/mockup_slice_preparation.md`：Mockup 设计图切图准备指南
+- `docs/mockup2spec_workflow.md`：从设计图/Mockup 到 UI-Spec 的完整工作流指南
 
 ## 游戏规则
 
