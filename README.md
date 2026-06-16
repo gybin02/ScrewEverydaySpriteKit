@@ -216,7 +216,10 @@ ScrewEverydaySpriteKit.xcodeproj
 | [docs/MVP_WORKFLOW.md](docs/MVP_WORKFLOW.md) | 从单屏到 MVP 的完整落地流程 |
 | [docs/MVP_COMPLETED_TASKS.md](docs/MVP_COMPLETED_TASKS.md) | MVP 阶段已完成任务报告 |
 | [docs/EXPERIENCE_AND_AUDIO.md](docs/EXPERIENCE_AND_AUDIO.md) | 体验优化与音效系统开发记录 |
-| [docs/ui-spec.md](docs/ui-spec.md) | UI 界面结构、布局坐标与交互状态 |
+| [docs/spec/global_spec.md](docs/spec/global_spec.md) | UI 全局规格、图层、状态与验收记录 |
+| [docs/spec/gameplay_page.md](docs/spec/gameplay_page.md) | 玩法主界面元素尺寸与交互动画规范 |
+| [docs/spec/overlay_popups.md](docs/spec/overlay_popups.md) | 胜利失败覆盖层与成就奖励弹窗规范 |
+| [docs/spec/app_ui_screens.md](docs/spec/app_ui_screens.md) | 主页、关卡、图鉴与结算页设计规范 |
 | [docs/design.md](docs/design.md) | 统一视觉规范 |
 | [docs/ASSET_PROMPTS.md](docs/ASSET_PROMPTS.md) | AI 图片资产生成 Prompt 记录 |
 | [docs/IMAGE_REPLACEMENT_WORKFLOW.md](docs/IMAGE_REPLACEMENT_WORKFLOW.md) | 图片替换流程 |

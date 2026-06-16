@@ -42,7 +42,6 @@ struct GameView: View {
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 1))
                     }
-                    
                     Spacer()
                     
                     // 当前金币数（提示买道具）
@@ -161,6 +160,29 @@ struct GameView: View {
                         }
                         .buttonStyle(OverlayMenuButtonStyle(isPrimary: false))
                     }
+                }
+            }
+            
+            // 调试过关悬浮按钮
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        scene.cheatWin()
+                    } label: {
+                        Text("测试过关")
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 10)
+                            .frame(height: 32)
+                            .background(Color.red.opacity(0.85))
+                            .clipShape(Capsule())
+                            .overlay(Capsule().stroke(Color.white.opacity(0.2), lineWidth: 1))
+                            .shadow(color: .black.opacity(0.25), radius: 4, x: 0, y: 2)
+                    }
+                    .padding(.trailing, 16)
+                    .padding(.bottom, 120)
                 }
             }
         }

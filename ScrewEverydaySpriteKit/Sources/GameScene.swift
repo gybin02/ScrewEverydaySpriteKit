@@ -890,4 +890,11 @@ private func animateBoardFall(_ node: SKNode) {
         isBusy = false
         return true
     }
+    
+    // 测试跳关 Cheat 接口
+    func cheatWin() {
+        guard gameStatus == .playing else { return }
+        endGame(.win)
+    }
 }
+
