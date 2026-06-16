@@ -16,7 +16,7 @@ struct AppRootView: View {
         ZStack {
             switch route {
             case .home:
-                FalHomeScreen(
+                HomeScreen(
                     progressStore: progressStore,
                     onPlay: { route = .game(progressStore.currentLevel) },
                     onLevels: { route = .levels },

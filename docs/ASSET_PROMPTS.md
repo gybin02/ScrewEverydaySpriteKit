@@ -297,3 +297,83 @@ UI asset sheet for a cute clay 3D casual puzzle mobile game. Solid pure magenta 
 - 通用 UI 控件素材源图。品红色背景便于 chroma key 去底切图。
 - 包含：返回按钮、关闭按钮、确认按钮、确定/下一步长按钮、弹窗背景框、装饰元素（星星/齿轮/螺丝/闪光/缎带）、体力条、金币条。
 - 切出的透明 PNG 可用于结算页、游戏页、弹窗等所有界面的通用控件。
+
+## 首页 Mockup 备选方案（2D 卡通风格）
+
+以下 3 套首页 mockup 统一使用 `-s portrait_9_19` 生成（608 × 1284），用于对比选择首页视觉方向。
+
+### 方案 A：活泼明快 (Playful)
+
+路径：
+
+```text
+art/mockup_home_2d_playful.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game home screen mockup, 2D flat cartoon style with bold outlines and vibrant colors. Dark navy background. Top bar: heart stamina icon with pink bar on left, golden coin counter on right. Center: a large cheerful cartoon screw town machine tower illustration with colorful gears, pipes, and funny face bolts, warm golden glow behind it. Title area: bubbly game logo banner with screw and gear decorations. Bottom: huge bright orange START button with bouncy shape, two smaller side buttons for LEVELS (map icon) and COLLECTION (book icon). Floating decorative screws, stars, and tiny gears scattered around. Fun playful energy, inviting to tap. Vertical phone layout 9:19, no real text use wavy scribble placeholders, no watermark
+```
+
+风格关键词：高饱和糖果色、拟人化螺丝角色、气泡标题框、活泼弹跳感。
+
+### 方案 B：温馨手绘 (Cozy)
+
+路径：
+
+```text
+art/mockup_home_2d_cozy.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game home screen mockup, 2D hand-drawn cartoon style with soft pastel colors and warm lighting. Cozy dark blue workshop background with wooden shelves. Top bar: cute heart life counter left, shiny coin counter right with subtle glow. Center: adorable 2D illustrated repair workshop scene with a quirky machine tower made of mismatched parts, tiny helper character peeking out, tools hanging on wall hooks. Middle: playful game title ribbon with gear ornaments. Bottom: large rounded green PLAY button with wrench icon, flanked by circular level-select and collection buttons. Scattered cute stickers: mini screws, nuts, sparkles. Warm homey feeling. Vertical phone layout 9:19, no real text use scribble placeholders, no watermark
+```
+
+风格关键词：暖色调工坊、手绘质感、可爱修理工角色、缝线按钮、居家温馨感。
+
+### 方案 C：漫画爆裂 (Pop Art)
+
+路径：
+
+```text
+art/mockup_home_2d_pop.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game home screen mockup, 2D pop art cartoon style with high contrast, thick black outlines, comic halftone dots, and saturated candy colors. Deep purple-blue background with radial burst pattern. Top bar: neon pink stamina bar left, glowing gold coin badge right. Center: explosive comic-style machine tower bursting with colorful screws flying outward, dynamic action lines, POW-style energy bursts. Title: bold chunky comic font style banner with metallic screw border. Bottom: massive yellow-orange PLAY button with speed lines and arrow, side buttons styled as comic panels for levels and collection. Electric fun arcade energy. Vertical phone layout 9:19, no real text use scribble placeholders, no watermark
+```
+
+风格关键词：波普放射线、漫画半调网点、爆炸动态感、粗描边、街机能量。
+
+### 方案 A-v2：活泼明快（无涂鸦占位）
+
+路径：
+
+```text
+art/mockup_home_2d_playful_v2.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game home screen mockup, 2D flat cartoon style with bold outlines and vibrant colors. Dark navy background. Top bar: heart stamina icon with pink bar on left, golden coin counter on right. Center: a large cheerful cartoon screw town machine tower illustration with colorful gears, pipes, and funny face bolts, warm golden glow behind it. Title area: bubbly game logo banner with screw and gear decorations. Bottom: huge bright orange START button with bouncy shape, two smaller side buttons for LEVELS (map icon) and COLLECTION (book icon). Floating decorative screws, stars, and tiny gears scattered around. Fun playful energy, inviting to tap. Vertical phone layout 9:19, no watermark
+```
+
+### 方案 A-v3：Candy Crush / Homescapes 风格
+
+路径：
+
+```text
+art/mockup_home_2d_playful_v3.png
+```
+
+Prompt：
+
+```text
+Mobile casual puzzle game home screen mockup, 2D flat cartoon style with bold outlines and bright saturated colors, similar to Candy Crush or Homescapes style. Dark navy starry background. Top bar: pink heart life bar on left with plus button, gold coin counter on right with plus button. Center: a big fun cartoon machine tower made of colorful screws, gears, pipes with cute emoji faces, radiating warm light. Large decorative game title banner above the tower with ribbon and screw ornaments. Bottom: oversized glossy orange rounded rectangle PLAY button with white arrow, two square icon buttons on sides for levels and collection. Cheerful confetti, floating screws, gear particles, star sparkles. Mainstream casual mobile game aesthetic. Vertical phone layout 9:19, no watermark
+```
