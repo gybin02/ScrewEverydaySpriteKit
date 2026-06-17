@@ -36,9 +36,12 @@ def flood_fill_remove_bg(img, threshold=245):
     visited = np.zeros((w, h), dtype=bool)
     queue = deque()
 
-    # 判断是否为需要去除的极浅底色
+    # 判断是否为需要去除的极浅底色或品红底色
     def is_bg_color(color):
         r, g, b, a = color
+        # 兼容品红色背景 (magenta #FF00FF)
+        if r > 150 and g < 100 and b > 100:
+            return True
         return r >= threshold and g >= threshold and b >= threshold
 
     # 1. 将四周边缘的背景像素入队

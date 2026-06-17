@@ -40,20 +40,20 @@ Mobile casual puzzle game gameplay screen, same 2D flat cartoon art style as the
 
 ## 3. 胜利结算界面
 
-路径：`art/mockup_victory_v3.png`
+路径：`art/mockup_victory_v3b.png`（定稿版，主视觉缩小，信息卡片为主体）
 
 ```text
-Mobile casual puzzle game victory settlement screen, same 2D flat cartoon art style as the reference image with bold outlines and bright saturated colors. Dark navy starry background. TOP: large golden trophy with cute screw decorations and emoji face, sparkle rays behind it. BANNER: green ribbon banner with VICTORY text, confetti and stars exploding. MIDDLE: beige rounded card panel showing stats - clock icon with time, screw icon with count, shoe icon with steps, each row with colorful badge. REWARD ROW: gold coin icon with +10 text and coin stack. BOTTOM: huge glossy orange NEXT LEVEL button with arrow, smaller dark BACK button below. Floating celebratory screws, gears, confetti particles. Same cheerful mainstream casual game aesthetic. Vertical phone layout 9:19, no watermark
+Mobile casual puzzle game victory settlement screen, same 2D flat cartoon art style as the reference image with bold outlines and bright saturated colors. Dark navy starry background. Compact layout with more card space. TOP: small golden trophy icon with star, kept small and centered, subtle sparkle rays. Below trophy: green ribbon banner with VICTORY text, modest size. MAIN CARD: large beige rounded panel taking most of screen space, inside showing: 3 stat rows (clock icon + time value, screw icon + count value, steps icon + steps value) each in a neat horizontal row with colorful pill-shaped badges on the right. Separator line. Reward section: coin icon row showing +10 gold coins. BOTTOM: large glossy orange NEXT LEVEL button with arrow, smaller dark BACK button below. Light confetti particles. Clean readable layout prioritizing information over decoration. Vertical phone layout 9:19, no watermark
 ```
 
 ---
 
 ## 4. 失败结算界面
 
-路径：`art/mockup_failure_v3.png`
+路径：`art/mockup_failure_v3b.png`（定稿版，主视觉缩小，信息卡片为主体）
 
 ```text
-Mobile casual puzzle game failure screen, same 2D flat cartoon art style as the reference image with bold outlines and bright saturated colors. Dark navy starry background. TOP: large sad broken screw character with worried emoji face, red warning triangle badge, cracks and loose bolts falling. BANNER: red ribbon banner with FAILED text, small explosion marks. MIDDLE: beige rounded card panel showing failure reason - overflowing bucket icon with colorful screws spilling out, warning text area. BOTTOM: huge glossy orange RETRY button with refresh arrow icon, smaller dark HOME button below. Moody but still colorful and encouraging atmosphere, dimmed floating screws and gears. Same mainstream casual game aesthetic. Vertical phone layout 9:19, no watermark
+Mobile casual puzzle game failure settlement screen, same 2D flat cartoon art style as the reference image with bold outlines and bright saturated colors. Dark navy starry background. Compact layout. TOP: small sad blue screw icon with worried face, kept small and centered, red warning triangle beside it. Below: red ribbon banner with FAILED text, modest size. MAIN CARD: large beige rounded panel taking most of screen space, inside showing: failure illustration (small overflowing bucket with screws spilling), failure reason text area, tip or hint section with lightbulb icon. BOTTOM: large glossy orange RETRY button with refresh icon, smaller dark HOME button below. Few dimmed floating screws. Clean readable layout prioritizing information over decoration. Vertical phone layout 9:19, no watermark
 ```
 
 ---
@@ -86,7 +86,7 @@ Mobile casual puzzle game popup dialog screen, same 2D flat cartoon art style as
 | --- | --- |
 | `art/mockup_home_2d_playful_v3.png` | 首页（风格源图） |
 | `art/mockup_gameplay_v3.png` | 游戏主界面 |
-| `art/mockup_victory_v3.png` | 胜利结算 |
-| `art/mockup_failure_v3.png` | 失败结算 |
+| `art/mockup_victory_v3b.png` | 胜利结算（定稿） |
+| `art/mockup_failure_v3b.png` | 失败结算（定稿） |
 | `art/mockup_ui_assets_v3.png` | 通用控件素材（品红背景切图用） |
 | `art/mockup_popup_v3.png` | 弹窗/奖励界面 |
